@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0290FF",
+    "navigationBarTitleText": "Home",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor" :"#0290FF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "Home",
+        "iconPath": "images/Home@3x.png",
+        "selectedIconPath": "images/Home-act@3x.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "Door",
+        "iconPath": "images/Door@3x.png",
+        "selectedIconPath": "images/Door-act@3x.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "Discount",
+        "iconPath": "images/Discount@3x.png",
+        "selectedIconPath": "images/Discount-act@3x.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "Me",
+        "iconPath": "images/me@3x.png",
+        "selectedIconPath": "images/me-act@3x.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ]
+}
