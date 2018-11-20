@@ -46,5 +46,11 @@
   "debug": true,
   "navigateToMiniProgramAppIdList": [
     "wxe5f52902cf4de896"
-  ]
+  ],
+  "plugins": {
+    "Crypto": {
+      "version": "0.0.003",
+      "provider": "wxf25d506ff81e19fb"
+    }
+  }
 }

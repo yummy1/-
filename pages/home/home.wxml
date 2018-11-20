@@ -1,22 +1,23 @@
 <!--home.wxml-->
 <view class="container">
-  <!-- <scroll-view class="box" scroll-y="true"> -->
     <view class="top">
-      <view class="ad">
-        <image class="logo" src="../../images/home_9.png" background-size="cover"></image>
-      </view>
+      <swiper wx:if="{{imgUrls.length!=0}}" class="ad" indicator-dots="{{false}}"
+  autoplay="{{true}}" indicator-active-color='white'>
+          <block wx:for="{{imgUrls}}" wx:key='id' wx:for-item="item">
+            <swiper-item>
+            <image wx:if="{{item}}" class="logo" src="{{item}}" background-size="cover"></image>
+            </swiper-item>
+          </block>
+      </swiper>
+      <block wx:else>
+        <view class="ad">
+          <image class="logo" src="../../images/home_9.png" background-size="cover"></image>
+        </view>
+      </block>
       <view class="item">
-        <view class="itemOne">
-          <image class="itemIcon" src="../../images/home_message.png"></image>
-          <text class="itemText">Message</text>
-        </view>
-        <view class="itemOne">
-          <image class="itemIcon" src="../../images/home_Service.png"></image>
-          <text class="itemText">Service</text>
-        </view>
-        <view class="itemOne">
-          <image class="itemIcon" src="../../images/home_Strata.png"></image>
-          <text class="itemText">Strata</text>
+        <view wx:for="{{items}}" wx:for-item="oneItem" wx:key="icon" class="itemOne">
+          <image class="itemIcon" src="{{oneItem.icon}}"></image>
+          <text class="itemText">{{oneItem.tittle}}</text>
         </view>
       </view>
     </view>
@@ -32,7 +33,7 @@
         </view>
       </view>
       <view class="newslist">
-        <view class="newsOne">
+        <view wx:for="{{news}}" wx:for-item="newsItem" wx:key="new" class="newsOne">
           <image class="newsIcon" src="../../images/home_9.png"></image>
           <view class="newsOneRight">
             <text class="newsTittle">Happy Children's Day cfv g b hj ghuj h j</text>
@@ -51,47 +52,6 @@
             </view>
           </view>
         </view>
-
-        <view class="newsOne">
-          <image class="newsIcon" src="../../images/home_9.png"></image>
-          <view class="newsOneRight">
-            <text class="newsTittle">Happy Children's Day cfvgbhj ghuj h j</text>
-            <view class="newsInfo">
-              <view class="newsInfoLeft">
-                <view class="newsComment">
-                  <image class="newsCommentIcon" src="../../images/home_2@3x.png"></image>
-                  <text>20</text>
-                </view>
-                <view class="newsLike">
-                  <image class="newsLikeIcon" src="../../images/home_3@3x.png"></image>
-                  <text>20</text>
-                </view>
-              </view>
-              <text class="newsDate">Today 16:20</text>
-            </view>
-          </view>
-        </view>
-
-        <view class="newsOne">
-          <image class="newsIcon" src="../../images/home_9.png"></image>
-          <view class="newsOneRight">
-            <text class="newsTittle">Happy Children's Day cfvgbhj ghuj h j</text>
-            <view class="newsInfo">
-              <view class="newsInfoLeft">
-                <view class="newsComment">
-                  <image class="newsCommentIcon" src="../../images/home_2@3x.png"></image>
-                  <text>20</text>
-                </view>
-                <view class="newsLike">
-                  <image class="newsLikeIcon" src="../../images/home_3@3x.png"></image>
-                  <text>20</text>
-                </view>
-              </view>
-              <text class="newsDate">Today 16:20</text>
-            </view>
-          </view>
-        </view>
       </view>
     </view>
-  <!-- </scroll-view> -->
 </view>
