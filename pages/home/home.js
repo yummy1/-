@@ -19,23 +19,39 @@ Page({
     items: [{ "icon": "../../images/home_message.png", "tittle": "Message" }, 
             { "icon": "../../images/home_Service.png", "tittle": "Service" }, 
             { "icon": "../../images/home_Strata.png", "tittle": "Strata" },],
-    news: [{},{},{}],
-    requestHomeDetail: {
-      requestCommand: 'homeDetails',
-      uid: '37'
-    }
+    news: [{},{},{}]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.requestData();
+    // this.requestData();
+    console.log('hahha');
+    var shuju = {
+      requestCommand: 'homeDetails',
+      uid: '37'
+    };
+    console.log('数据'+JSON.stringify(shuju));
+    var jiami = new crypto.DES().encrypt(JSON.stringify(shuju), 'fTZqeicURs4AFZUIAmGCsCfI', {
+      mode: crypto.Mode['ECB'],
+      padding: crypto.Padding['Pkcs7']
+    });
+    // var jiami = des3.encrypt(requestHomeDetail)
+    console.log("加密后：" + jiami.toString());
+
+    var str = jiami.toString();
+    const v = new crypto.DES().decrypt(str, "fTZqeicURs4AFZUIAmGCsCfI", {
+      mode: crypto.Mode['ECB'],
+      padding: crypto.Padding['Pkcs7']
+    });
+    console.log('解密后：', v.toString(crypto.Utf8));
   },
 
   requestData:function(){
     wx.request({
-      url: 'http://149.28.161.39:8080/smart.do?apiFistPage', 
+      url: 'https://www.xiuyuewang.com/carousels.action',
+      // url: 'http://149.28.161.39:8080/smart.do?apiFistPage', 
       // data: {
       //   data: crypto.DES().encrypt(requestHomeDetail, 'fTZqeicURs4AFZUIAmGCsCfI', {
       //       mode: crypto.ECB,
