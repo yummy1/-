@@ -1,0 +1,30 @@
+.movieDetailContainer{
+  display: flex;
+  flex-direction: column;
+}
+.icon{
+  width: 70%;
+  height: 700rpx;
+  margin: 50rpx auto;
+}
+.title{
+  margin: 0 15%;
+  font-weight: 700;
+  font-size: 38rpx;
+  text-align: center;
+}
+.info{
+  margin: 30rpx 15%;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+}
+.info text{
+  margin: 10rpx 0;
+}
+.lookBtn{
+  background: green;
+  margin: 0 15% 30rpx 15%;
+  font-size: 30rpx;
+  color: white;
+}

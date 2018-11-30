@@ -1,0 +1,15 @@
+<import src="/template/template"/>
+<view class='articleContainer'>
+  <swiper catchtap='carouselToDetail' indicator-dots="{{true}}" indicator-color="white" indicator-active-color="yellow">
+    <block wx:for="{{ads}}" wx:key="{{index}}">
+      <swiper-item >
+      <image data-detailId="{{index}}" class='carousel' src='{{item}}'></image>
+    </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{articles}}" wx:key="{{index}}">
+    <view catchtap='gotoDetail' data-id="{{index}}">
+      <template is="articlelist" data="{{...item}}"></template>
+    </view>
+  </block>
+</view>

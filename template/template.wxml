@@ -1,0 +1,17 @@
+<template name="articlelist">
+  <view class='article'>
+    <view class='header'>
+      <image src='{{avatar}}'></image>
+      <text>{{date}}</text>
+    </view>
+    <text class='title'>{{title}}</text>
+    <image class='a_image' src='{{headImgSrc}}'></image>
+    <text class='content'>{{detail_content}}</text>
+    <view class='a_bottom'>
+      <image src='/images/icon/view.png'></image>
+      <text>{{love_count}}</text>
+      <image src='/images/icon/chat.png'></image>
+      <text>{{attention_count}}</text>
+    </view>
+  </view>
+</template>

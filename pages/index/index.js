@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '欢迎进入小程序',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -29,6 +29,8 @@ Page({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
+        app.globalData.userInfo = res.userInfo
+        this.gotoHome();
       }
     } else {
       // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -49,6 +51,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  gotoHome:function(){
+    wx.switchTab({
+      url: '/pages/home/home',
     })
   }
 })

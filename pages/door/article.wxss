@@ -1,0 +1,13 @@
+@import "/template/template";
+.articleContainer{
+  display: flex;
+  flex-direction: column;
+}
+.articleContainer swiper{
+  width: 100%;
+  height: 440rpx;
+}
+.carousel{
+  width: 100%;
+  height: 100%;
+}

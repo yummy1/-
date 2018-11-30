@@ -1,0 +1,10 @@
+<view class='movieDetailContainer'>
+  <image class='icon' src='{{movie.images.large}}'></image>
+  <text class='title'>{{movie.title}}</text>
+  <view class='info'>
+    <text>评分：{{movie.rating.average}}</text>
+    <text>导演：{{movie.directors[0].name}}     </text>
+    <text>主演：{{movie.casts[0].name}} {{movie.casts[1].name}} {{movie.casts[2].name}}</text>
+  </view>
+  <button class='lookBtn'>我要观影</button>
+</view>

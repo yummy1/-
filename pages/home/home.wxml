@@ -32,23 +32,26 @@
           <image class="headerIcon_right" src="../../images/right.png"></image>
         </view>
       </view>
-      <view class="newslist">
-        <view wx:for="{{news}}" wx:for-item="newsItem" wx:key="new" class="newsOne">
-          <image class="newsIcon" src="../../images/home_9.png"></image>
+      <view wx:for="{{news}}" wx:for-item="newsItem" wx:key="new" class="newslist">
+        <!-- <block>
+
+        </block> -->
+        <view class="newsOne">
+          <image class="newsIcon" src="{{newsItem.nImage}}"></image>
           <view class="newsOneRight">
-            <text class="newsTittle">Happy Children's Day cfv g b hj ghuj h j</text>
+            <text class="newsTittle">{{newsItem.nTitle}}</text>
             <view class="newsInfo">
               <view class="newsInfoLeft">
                 <view class="newsComment">
                   <image class="newsCommentIcon" src="../../images/home_2@3x.png"></image>
-                  <text>20</text>
+                  <text>{{newsItem.nLike}}</text>
                 </view>
                 <view class="newsLike">
                   <image class="newsLikeIcon" src="../../images/home_3@3x.png"></image>
-                  <text>20</text>
+                  <text>{{newsItem.nMsg}}</text>
                 </view>
               </view>
-              <text class="newsDate">Today 16:20</text>
+              <text class="newsDate">{{newsItem.nDate}}</text>
             </view>
           </view>
         </view>

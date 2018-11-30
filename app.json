@@ -1,7 +1,11 @@
 {
   "pages":[
-    "pages/home/home",
     "pages/index/index",
+    "pages/home/home",
+    "pages/door/article",
+    "pages/articleDetail/articleDetail",
+    "pages/movies/movies",
+    "pages/moviesDetail/moviesDetail",
     "pages/logs/logs"
   ],
   "window":{
@@ -20,14 +24,14 @@
         "selectedIconPath": "images/Home-act@3x.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "Door",
+        "pagePath": "pages/door/article",
+        "text": "文与字",
         "iconPath": "images/Door@3x.png",
         "selectedIconPath": "images/Door-act@3x.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "text": "Discount",
+        "pagePath": "pages/movies/movies",
+        "text": "电影",
         "iconPath": "images/Discount@3x.png",
         "selectedIconPath": "images/Discount-act@3x.png"
       },
@@ -46,6 +50,9 @@
   "debug": true,
   "navigateToMiniProgramAppIdList": [
     "wxe5f52902cf4de896"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
   ],
   "plugins": {
     "Crypto": {

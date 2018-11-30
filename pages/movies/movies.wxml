@@ -1,0 +1,9 @@
+<view class='movieContainer' wx:for="{{movies}}" wx:for-item="item" wx:key="index" catchtap='gotoMoviesDetail' data-movie="{{item}}">
+  <image class='movieCoverIcon' src='{{item.images.large}}'></image>
+  <view class='info'>
+    <text class='name'>{{item.original_title}}</text>
+    <text class='year'>年份: {{item.year}}</text>
+    <text class='director'>导演: {{item.directors[0].name}}</text>
+  </view>
+  <text class='score'>{{item.rating.average}}</text>
+</view>

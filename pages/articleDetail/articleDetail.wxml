@@ -1,0 +1,20 @@
+<view class='detailContainer'>
+  <view class='top'>
+    <image class='cover' src='{{isMusicPlay?datas.music.coverImgUrl:datas.detail_img}}'></image>
+    <image catchtap='musicPlay' class='music' src="{{isMusicPlay?'/images/music/music-start.png':'/images/music/music-stop.png'}}"></image>
+  </view>
+  <view class='header'>
+    <image src="{{datas.avatar}}"></image>
+    <text>{{datas.author}}</text>
+    <text>发布于</text>
+    <text>{{datas.date}}</text>
+  </view>
+  <text class='title'>{{datas.title}}</text>
+  <view class='function'>
+    <image catchtap='shareAction' src='/images/icon/share.png'></image>
+    <image catchtap='collectAction' src="{{!isCollected?'/images/icon/collection-anti.png':'/images/icon/collection.png'}}"></image>
+    <view class='line'></view>
+  </view>
+  <button open-type='share'>转发此文章</button>
+  <text class='content'>{{datas.detail_content}}</text>
+</view>

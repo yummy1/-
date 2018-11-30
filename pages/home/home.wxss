@@ -1,21 +1,21 @@
 /**home.wxss**/
 .container{
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0rpx;
+  padding: 0rpx;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 .top{
   width: 100%;
-  height: 320px;
+  height: 640rpx;
   background-color: rgb(245, 245, 245);
   position: relative
 }
 .ad{
   width: 100%;
-  height: 220px;
+  height: 440rpx;
   position: absolute
 }
 .logo{
@@ -27,79 +27,79 @@
   position: absolute;
   margin-left: 3%;
   margin-bottom: 8%;
-  margin-top: 205px;
+  margin-top: 410rpx;
   background-color: white;
   width: 94%;
-  height: 100px;
+  height: 200rpx;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  box-shadow:0px 1px 5px 1px darkgray;
-  border-radius: 5px
+  box-shadow:0px 2rpx 10rpx 2rpx darkgray;
+  border-radius: 10rpx
 }
 .itemOne{
   width: 33%;
-  height: 105px;
+  height: 210rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;/**内容居中*/
   align-items: center;/**子view垂直居中*/
 }
 .itemIcon{
-  width: 50px;
-  height: 50px;
-  padding-top: 5px
+  width: 100rpx;
+  height: 100rpx;
+  padding-top: 10rpx
 }
 .itemText{
   color: rgb(50, 50, 50);
-  font-size: 15px;
-  padding: 8px
+  font-size: 30rpx;
+  padding: 16rpx
 }
 .news{
   width: 100%;
-  height: 200px
+  height: 400rpx
 }
 .newsHeader{
   width: 100%;
-  height: 40px;
+  height: 80rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(235, 235, 235)
+  border-bottom: 2rpx solid rgb(235, 235, 235)
 }
 .header_left{
-  width: 150px;
+  width: 300rpx;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center
 }
 .header_right{
-  width: 65px;
+  width: 130rpx;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center
 }
 .headerIcon_left{
-  width: 25px;
-  height: 25px;
-  margin-left: 10px
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx
 }
 .headerText_left{
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: 600;
   color: rgb(0, 133, 250);
-  margin-left: 10px
+  margin-left: 20rpx
 }
 .headerIcon_right{
-  width: 10px;
-  height: 17px;
-  margin-left: 10px
+  width: 20rpx;
+  height: 34rpx;
+  margin-left: 20rpx
 }
 .headerText_right{
   color: darkgray;
-  font-size: 15px;
+  font-size: 30rpx;
   font-weight: 400
 }
 .newslist{
@@ -107,27 +107,32 @@
 }
 .newsOne{
   width: 100%;
-  height: 120px;
-  /* padding: 15px 16px; */
+  height: 240rpx;
   display: flex;
   flex-direction: row;
-  border-bottom: 0.5px solid rgb(235, 235, 235)
+  border-bottom: 1rpx solid rgb(235, 235, 235)
 }
 .newsIcon{
-  width: 150px;
-  height: 90px;
-  padding: 15px 16px;
+  width: 35%;
+  height: 180rpx;
+  margin: 30rpx 32rpx;
 }
 .newsOneRight{
-  padding-right: 16px;
-  padding-top: 15px;
-  height: 90px;
+  margin-right: 32rpx;
+  margin-top: 30rpx;
+  height: 180rpx;
+  width: 65%;
   position: relative
 }
 .newsTittle{
   color: rgb(50, 50, 50);
-  font-size: 16px;
-  height: 60px
+  font-size: 34rpx;
+  height: 95rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .newsInfo{
   display: flex;
@@ -135,9 +140,9 @@
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  bottom: 0px;
-  right: 16px;
-  left: 0px
+  bottom: 0rpx;
+  right: 0rpx;
+  left: 0rpx
 }
 .newsInfoLeft{
   display: flex;
@@ -147,13 +152,13 @@
 }
 .newsInfo text{
   color: darkgray;
-  font-size: 14px;
-  margin-left: 5px
+  font-size: 28rpx;
+  margin-left: 10rpx
 }
 .newsInfo image{
-  width: 15px;
-  height: 15px
+  width: 30rpx;
+  height: 30rpx
 }
 .newsLikeIcon{
-  margin-left: 15px
+  margin-left: 30rpx
 }
