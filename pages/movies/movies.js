@@ -15,6 +15,7 @@ Page({
     wx.request({
       url: MOVIE_URL,
       success:(response)=>{
+        console.log('打印请求数据：' + response.data.subjects);
         console.log(response.data.subjects);
         this.setData({
           movies: response.data.subjects
